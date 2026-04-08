@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wat eten we?</title>
+    <style>
+        body { font-family: sans-serif; background: #FF5733; color: white; text-align: center; padding: 50px 20px; }
+        .kaart { background: white; color: #333; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        #resultaat { font-size: 2rem; font-weight: bold; margin: 20px 0; color: #FF5733; }
+        button { background: #333; color: white; border: none; padding: 15px 30px; font-size: 1rem; border-radius: 50px; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+    <div class="kaart">
+        <h1>Keuzestress Oplosser</h1>
+        <p>Wat eten we vandaag?</p>
+        <div id="resultaat">?</div>
+        <button onclick="kiesEten()">Klik voor een idee</button>
+    </div>
+    <script>
+        function kiesEten() {
+            const opties = ["Pasta Pesto", "Wraps", "Soep met brood", "Curry", "Zelfgemaakte Pizza", "Maaltijdsalade", "Stamppot", "Sushi"];
+            document.getElementById('resultaat').innerText = opties[Math.floor(Math.random() * opties.length)];
+        }
+    </script>
+</body>
+</html>
